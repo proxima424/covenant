@@ -5,7 +5,7 @@ import {ReentrancyGuard} from "@openzeppelin/security/ReentrancyGuard.sol";
 
 /// @title Covenant ZK-Game
 /// @author proxima424 <https://github.com/proxima424>
-/// @author Asif Khan
+/// @author Asif Khan 
 /// @author Ragib
 
 contract Covenant is ReentrancyGuard {
@@ -22,12 +22,7 @@ contract Covenant is ReentrancyGuard {
     uint256 public endTime;
 
     uint256 public totalVotes;
-    uint256 public redVotes;
-    uint256 public blueVotes;
-
     uint256 public totalDeposit;
-    uint256 public redDeposit;
-    uint256 public blueDeposit;
 
     // 0 == Has not voted
     // 1 == Has voted for Red
@@ -62,5 +57,8 @@ contract Covenant is ReentrancyGuard {
         endTime = now + CYCLE_DURATION;
     }
 
+    // Accepts native eth
     function vote() nonReentrant {}
+
+
 }
